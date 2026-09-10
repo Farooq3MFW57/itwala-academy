@@ -1,0 +1,46 @@
+name: Courage Code Fix
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'What to fix or change'
+        required: true
+      target_file:
+        description: 'File to edit'
+        required: true
+
+jobs:
+  fix-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create branch
+        run: |
+          git checkout -b courage-fix-${{ github.run_id }}
+
+      - name: Read target file and ask gpt-5.5 for a fix
+        env:
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
+          TASK: ${{ inputs.task }}
+          TARGET_FILE: ${{ inputs.target_file }}
+        run: |
+          node .github/scripts/apply-fix.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "Courage Bot"
+          git config user.email "courage-bot@itwala.academy"
+          git add .
+          git commit -m "Courage: ${{ inputs.task }}"
+          git push origin courage-fix-${{ github.run_id }}
+
+      - name: Open Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create --title "Courage: ${{ inputs.task }}" --body "Automated fix requested via Teams chat." --base main --head courage-fix-${{ github.run_id }}
