@@ -32,15 +32,18 @@ jobs:
           node .github/scripts/apply-fix.js
 
       - name: Commit and push
+        env:
+          TASK: ${{ inputs.task }}
         run: |
           git config user.name "Courage Bot"
           git config user.email "courage-bot@itwala.academy"
           git add .
-          git commit -m "Courage: ${{ inputs.task }}"
+          git commit -m "Courage: $TASK"
           git push origin courage-fix-${{ github.run_id }}
 
       - name: Open Pull Request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TASK: ${{ inputs.task }}
         run: |
-          gh pr create --title "Courage: ${{ inputs.task }}" --body "Automated fix requested via Teams chat." --base main --head courage-fix-${{ github.run_id }}
+          gh pr create --title "Courage: $TASK" --body "Automated fix requested via Teams chat." --base main --head courage-fix-${{ github.run_id }}
