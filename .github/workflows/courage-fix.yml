@@ -51,3 +51,14 @@ jobs:
           TASK: ${{ inputs.task }}
         run: |
           gh pr create --title "Courage: $TASK" --body "Automated fix requested via Teams chat." --base main --head courage-fix-${{ github.run_id }}
+
+      - name: Notify Courage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTIFY_URL: ${{ secrets.COURAGE_NOTIFY_URL }}
+          TASK: ${{ inputs.task }}
+        run: |
+          PR_URL=$(gh pr view --json url -q .url)
+          curl -X POST "$NOTIFY_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"task\": \"$TASK\", \"prUrl\": \"$PR_URL\"}"
