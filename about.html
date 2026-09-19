@@ -1,90 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About ITwala Academy</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ADD8E6, #81e05e);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        header, main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: #222;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-            padding: 8px 14px;
-            border-radius: 6px;
-            background-color: #ffffff;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #f5f5f5;
-        }
-
-        .about {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-
-        .about h2 {
-            margin-top: 0;
-            color: #222;
-            text-align: center;
-        }
-
-        .about p {
-            line-height: 1.6;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>About ITwala Academy</h1>
-        <p>Building practical Microsoft and IT skills for future-ready learners.</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </nav>
+    <header class="site-header">
+        <div class="site-shell">
+            <div class="topbar">
+                <a class="brand" href="index.html" aria-label="ITwala Academy home">
+                    <span class="brand-mark">IT</span>
+                    <span class="brand-text">
+                        ITwala Academy
+                        <small>Microsoft Learning</small>
+                    </span>
+                </a>
+
+                <nav class="nav-links" aria-label="Primary navigation">
+                    <a href="index.html">Home</a>
+                    <a class="active" href="about.html">About</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="about">
-            <h2>Our Mission</h2>
-            <p>
-                ITwala Academy's mission is to make high-quality Microsoft technology education accessible,
-                practical, and career-focused for learners at every level.
-            </p>
-            <p>
-                We aim to help students, professionals, and organizations build confidence with tools such as
-                Microsoft Office, Microsoft 365, Azure, Power BI, Teams, and SharePoint through hands-on training
-                and real-world learning experiences.
-            </p>
-            <p>
-                Our goal is to prepare learners with the digital skills needed to improve productivity,
-                support workplace collaboration, earn certifications, and grow in modern IT careers.
-            </p>
+    <main class="site-shell section">
+        <section class="content-card mission-grid">
+            <div class="mission-panel">
+                <p class="eyebrow">About ITwala Academy</p>
+                <h1>Building practical Microsoft and IT skills for future-ready learners.</h1>
+                <p>
+                    We make technology training accessible, applied, and aligned with real career outcomes.
+                </p>
+            </div>
+
+            <div class="mission-copy">
+                <article>
+                    <h2>Our Mission</h2>
+                    <p>
+                        ITwala Academy's mission is to make high-quality Microsoft technology education
+                        accessible, practical, and career-focused for learners at every level.
+                    </p>
+                </article>
+
+                <article>
+                    <h2>Hands-On Microsoft Learning</h2>
+                    <p>
+                        We aim to help students, professionals, and organizations build confidence with
+                        tools such as Microsoft Office, Microsoft 365, Azure, Power BI, Teams, and SharePoint
+                        through guided training and real-world learning experiences.
+                    </p>
+                </article>
+
+                <article>
+                    <h2>Career-Ready Outcomes</h2>
+                    <p>
+                        Our goal is to prepare learners with the digital skills needed to improve productivity,
+                        support workplace collaboration, earn certifications, and grow in modern IT careers.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-shell">
+            ITwala Academy &copy; 2026. Powered by practical Microsoft learning.
+        </div>
+    </footer>
 </body>
 </html>
