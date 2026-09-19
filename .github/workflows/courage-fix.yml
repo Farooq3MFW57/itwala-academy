@@ -6,7 +6,7 @@ on:
       task:
         description: 'What to fix or change'
         required: true
-      target_file:
+      target_files:
         description: 'Comma-separated list of files to edit/create'
         required: true
 
@@ -31,7 +31,7 @@ jobs:
           AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_KEY }}
           AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
           TASK: ${{ inputs.task }}
-          TARGET_FILE: ${{ inputs.target_files }}
+          TARGET_FILES: ${{ inputs.target_files }}
         run: |
           node .github/scripts/apply-fix.js
 
