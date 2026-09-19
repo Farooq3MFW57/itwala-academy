@@ -1,92 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITwala Academy - Coming Soon</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ADD8E6, #81e05e);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        header, main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: #222;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-            padding: 8px 14px;
-            border-radius: 6px;
-            background-color: #ffffff;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #f5f5f5;
-        }
-
-        .services {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .services h2 {
-            margin-top: 0;
-            color: #222;
-        }
-
-        .services ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0 0;
-        }
-
-        .services li {
-            background-color: #f5f5f5;
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 6px;
-            background-color: #ADD8E6;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Hello Farooq!</h1>
-        <p>ITwala Academy is coming soon.</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </nav>
+    <header class="site-header">
+        <div class="site-shell">
+            <div class="topbar">
+                <a class="brand" href="index.html" aria-label="ITwala Academy home">
+                    <span class="brand-mark">IT</span>
+                    <span class="brand-text">
+                        ITwala Academy
+                        <small>Microsoft Learning</small>
+                    </span>
+                </a>
+
+                <nav class="nav-links" aria-label="Primary navigation">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="services">
-            <h2>Our Microsoft Academy Offerings</h2>
-            <ul>
-                <li>Microsoft Office training, including Word, Excel, PowerPoint, and Outlook</li>
-                <li>Microsoft 365 productivity and collaboration courses</li>
-                <li>Azure cloud fundamentals and certification preparation</li>
-                <li>Power BI data analysis and dashboard development</li>
-                <li>Microsoft Teams and SharePoint workplace collaboration training</li>
-                <li>Career-focused IT skills and hands-on project-based learning</li>
-            </ul>
+        <section class="site-shell hero">
+            <div class="hero-content">
+                <p class="eyebrow">Launching Soon</p>
+                <h1>Hello Farooq! <span class="gradient-text">ITwala Academy</span> is coming soon.</h1>
+                <p class="hero-lede">
+                    A future-ready Microsoft academy experience for practical cloud, productivity,
+                    analytics, and workplace collaboration skills.
+                </p>
+
+                <div class="cta-row">
+                    <a class="button button-primary" href="#offerings">Explore Offerings</a>
+                    <a class="button button-secondary" href="about.html">Our Mission</a>
+                </div>
+
+                <div class="stats" aria-label="Academy highlights">
+                    <div class="stat">
+                        <strong>365</strong>
+                        <span>Productivity skills</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Azure</strong>
+                        <span>Cloud fundamentals</span>
+                    </div>
+                    <div class="stat">
+                        <strong>BI</strong>
+                        <span>Data dashboards</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="nebula-card" aria-label="Microsoft learning focus">
+                <div class="orbit">
+                    <span class="orbit-ring"></span>
+                    <span class="orbit-ring"></span>
+                    <span class="orbit-ring"></span>
+                    <span class="orbit-core">MS</span>
+                    <span class="floating-chip chip-azure">Azure</span>
+                    <span class="floating-chip chip-m365">Microsoft 365</span>
+                    <span class="floating-chip chip-powerbi">Power BI</span>
+                </div>
+
+                <div class="card-footer">
+                    <h2>Hands-on, career-focused learning</h2>
+                    <p>
+                        Designed around real workplace tools, guided labs, certification readiness,
+                        and practical projects.
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <section id="offerings" class="site-shell section">
+            <div class="section-header">
+                <p class="eyebrow">Academy Programs</p>
+                <h2>Our Microsoft Academy Offerings</h2>
+                <p>
+                    Build confidence with the Microsoft ecosystem through structured,
+                    approachable, and project-based training.
+                </p>
+            </div>
+
+            <div class="offerings-grid">
+                <article class="offering-card">
+                    <div class="icon">01</div>
+                    <h3>Microsoft Office</h3>
+                    <p>Training for Word, Excel, PowerPoint, and Outlook with practical workplace workflows.</p>
+                </article>
+
+                <article class="offering-card">
+                    <div class="icon">02</div>
+                    <h3>Microsoft 365</h3>
+                    <p>Productivity and collaboration courses for modern digital teams and organizations.</p>
+                </article>
+
+                <article class="offering-card">
+                    <div class="icon">03</div>
+                    <h3>Azure Fundamentals</h3>
+                    <p>Cloud concepts, Azure services, and certification preparation for new IT learners.</p>
+                </article>
+
+                <article class="offering-card">
+                    <div class="icon">04</div>
+                    <h3>Power BI</h3>
+                    <p>Data analysis, report building, and dashboard development for business insights.</p>
+                </article>
+
+                <article class="offering-card">
+                    <div class="icon">05</div>
+                    <h3>Teams &amp; SharePoint</h3>
+                    <p>Workplace collaboration training for communication, files, sites, and knowledge sharing.</p>
+                </article>
+
+                <article class="offering-card">
+                    <div class="icon">06</div>
+                    <h3>Career IT Skills</h3>
+                    <p>Hands-on, project-based learning that supports productivity, confidence, and career growth.</p>
+                </article>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-shell">
+            ITwala Academy &copy; 2026. Powered by practical Microsoft learning.
+        </div>
+    </footer>
 </body>
 </html>
