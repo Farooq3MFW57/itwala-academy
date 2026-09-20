@@ -846,8 +846,18 @@ h1 {
 .site-footer {
     padding: 26px 0 40px;
     color: var(--sn-text-muted);
-    text-align: center;
+    text-align: left;
     font-size: 14px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-inner p {
+    margin-bottom: 0;
 }
 
 @media (max-width: 900px) {
