@@ -752,6 +752,7 @@ h1 {
 
 .mission-panel h1 {
     margin-bottom: 16px;
+    color: var(--sn-primary);
     font-size: clamp(38px, 5vw, 62px);
 }
 
