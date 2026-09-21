@@ -1,24 +1,38 @@
 :root {
-    --sn-bg: #fdf0d5;
-    --sn-bg-soft: #669bbc;
-    --sn-surface: rgba(253, 240, 213, 0.88);
-    --sn-surface-strong: #fdf0d5;
-    --sn-surface-rgb: 253, 240, 213;
-    --sn-border: rgba(0, 48, 73, 0.16);
-    --sn-text: #003049;
-    --sn-text-muted: rgba(0, 48, 73, 0.72);
-    --sn-primary: #003049;
-    --sn-primary-rgb: 0, 48, 73;
-    --sn-secondary: #c1121f;
-    --sn-secondary-rgb: 193, 18, 31;
-    --sn-secondary-deep: #780000;
-    --sn-secondary-deep-rgb: 120, 0, 0;
-    --sn-accent: #669bbc;
-    --sn-accent-rgb: 102, 155, 188;
-    --sn-warning: #780000;
-    --sn-warning-rgb: 120, 0, 0;
-    --sn-success: #669bbc;
-    --sn-success-rgb: 102, 155, 188;
+    color-scheme: light;
+
+    --itwala-red-deep: #780000;
+    --itwala-red: #c1121f;
+    --itwala-cream: #fdf0d5;
+    --itwala-navy: #003049;
+    --itwala-blue: #669bbc;
+
+    --itwala-red-deep-rgb: 120, 0, 0;
+    --itwala-red-rgb: 193, 18, 31;
+    --itwala-cream-rgb: 253, 240, 213;
+    --itwala-navy-rgb: 0, 48, 73;
+    --itwala-blue-rgb: 102, 155, 188;
+
+    --sn-bg: var(--itwala-cream);
+    --sn-bg-soft: var(--itwala-blue);
+    --sn-surface: rgba(var(--itwala-cream-rgb), 0.88);
+    --sn-surface-strong: var(--itwala-cream);
+    --sn-surface-rgb: var(--itwala-cream-rgb);
+    --sn-border: rgba(var(--itwala-navy-rgb), 0.16);
+    --sn-text: var(--itwala-navy);
+    --sn-text-muted: rgba(var(--itwala-navy-rgb), 0.72);
+    --sn-primary: var(--itwala-navy);
+    --sn-primary-rgb: var(--itwala-navy-rgb);
+    --sn-secondary: var(--itwala-red);
+    --sn-secondary-rgb: var(--itwala-red-rgb);
+    --sn-secondary-deep: var(--itwala-red-deep);
+    --sn-secondary-deep-rgb: var(--itwala-red-deep-rgb);
+    --sn-accent: var(--itwala-blue);
+    --sn-accent-rgb: var(--itwala-blue-rgb);
+    --sn-warning: var(--itwala-red-deep);
+    --sn-warning-rgb: var(--itwala-red-deep-rgb);
+    --sn-success: var(--itwala-blue);
+    --sn-success-rgb: var(--itwala-blue-rgb);
     --sn-shadow: 0 24px 70px rgba(var(--sn-primary-rgb), 0.16);
     --sn-radius-lg: 28px;
     --sn-radius-md: 18px;
