@@ -1,23 +1,30 @@
 :root {
-    --sn-bg: #fdf0d5;
-    --sn-bg-soft: #669bbc;
+    /* Approved PR 32 locked color palette */
+    --sn-pr32-deep-red: #780000;
+    --sn-pr32-red: #c1121f;
+    --sn-pr32-cream: #fdf0d5;
+    --sn-pr32-navy: #003049;
+    --sn-pr32-blue: #669bbc;
+
+    --sn-bg: var(--sn-pr32-cream);
+    --sn-bg-soft: var(--sn-pr32-blue);
     --sn-surface: rgba(253, 240, 213, 0.88);
-    --sn-surface-strong: #fdf0d5;
+    --sn-surface-strong: var(--sn-pr32-cream);
     --sn-surface-rgb: 253, 240, 213;
     --sn-border: rgba(0, 48, 73, 0.16);
-    --sn-text: #003049;
+    --sn-text: var(--sn-pr32-navy);
     --sn-text-muted: rgba(0, 48, 73, 0.72);
-    --sn-primary: #003049;
+    --sn-primary: var(--sn-pr32-navy);
     --sn-primary-rgb: 0, 48, 73;
-    --sn-secondary: #c1121f;
+    --sn-secondary: var(--sn-pr32-red);
     --sn-secondary-rgb: 193, 18, 31;
-    --sn-secondary-deep: #780000;
+    --sn-secondary-deep: var(--sn-pr32-deep-red);
     --sn-secondary-deep-rgb: 120, 0, 0;
-    --sn-accent: #669bbc;
+    --sn-accent: var(--sn-pr32-blue);
     --sn-accent-rgb: 102, 155, 188;
-    --sn-warning: #780000;
+    --sn-warning: var(--sn-pr32-deep-red);
     --sn-warning-rgb: 120, 0, 0;
-    --sn-success: #669bbc;
+    --sn-success: var(--sn-pr32-blue);
     --sn-success-rgb: 102, 155, 188;
     --sn-shadow: 0 24px 70px rgba(var(--sn-primary-rgb), 0.16);
     --sn-radius-lg: 28px;
@@ -57,7 +64,7 @@ body::before {
         linear-gradient(rgba(var(--sn-primary-rgb), 0.055) 1px, transparent 1px),
         linear-gradient(90deg, rgba(var(--sn-primary-rgb), 0.055) 1px, transparent 1px);
     background-size: 58px 58px;
-    mask-image: radial-gradient(circle at center, black, transparent 78%);
+    mask-image: radial-gradient(circle at center, var(--sn-primary), transparent 78%);
 }
 
 body::after {
