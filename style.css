@@ -1,12 +1,12 @@
 :root {
     --sn-bg: #fdf0d5;
-    --sn-bg-soft: #d8e8ef;
-    --sn-surface: rgba(255, 251, 241, 0.88);
-    --sn-surface-strong: #fffbf1;
-    --sn-surface-rgb: 255, 251, 241;
+    --sn-bg-soft: #669bbc;
+    --sn-surface: rgba(253, 240, 213, 0.88);
+    --sn-surface-strong: #fdf0d5;
+    --sn-surface-rgb: 253, 240, 213;
     --sn-border: rgba(0, 48, 73, 0.16);
     --sn-text: #003049;
-    --sn-text-muted: #4f6572;
+    --sn-text-muted: rgba(0, 48, 73, 0.72);
     --sn-primary: #003049;
     --sn-primary-rgb: 0, 48, 73;
     --sn-secondary: #c1121f;
@@ -44,7 +44,7 @@ body {
         radial-gradient(circle at 8% 10%, rgba(var(--sn-accent-rgb), 0.24), transparent 30%),
         radial-gradient(circle at 88% 12%, rgba(var(--sn-secondary-rgb), 0.14), transparent 30%),
         radial-gradient(circle at 70% 88%, rgba(var(--sn-primary-rgb), 0.12), transparent 32%),
-        linear-gradient(135deg, var(--sn-surface-strong) 0%, var(--sn-bg) 48%, var(--sn-bg-soft) 100%);
+        linear-gradient(135deg, var(--sn-surface-strong) 0%, var(--sn-bg) 48%, rgba(var(--sn-accent-rgb), 0.28) 100%);
     overflow-x: hidden;
 }
 
