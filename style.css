@@ -741,6 +741,73 @@ h1 {
     gap: 22px;
 }
 
+.about-hero-card .mission-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: stretch;
+}
+
+.about-hero-card .mission-panel {
+    position: relative;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.about-hero-card .mission-panel h1 {
+    max-width: 760px;
+    margin-bottom: 18px;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 0.96;
+    letter-spacing: -0.07em;
+}
+
+.about-hero-card .mission-panel p:not(.eyebrow) {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: var(--sn-text-muted);
+    font-size: clamp(17px, 2vw, 21px);
+}
+
+.about-intro-stats {
+    margin-top: 30px;
+}
+
+.about-hero-card .mission-copy {
+    align-content: stretch;
+}
+
+.about-hero-card .mission-copy article {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    background:
+        linear-gradient(145deg, rgba(var(--sn-surface-rgb), 0.82), rgba(var(--sn-surface-rgb), 0.66)),
+        radial-gradient(circle at top right, rgba(var(--sn-accent-rgb), 0.14), transparent 46%);
+    box-shadow: 0 16px 42px rgba(var(--sn-primary-rgb), 0.1);
+}
+
+.about-hero-card .mission-copy article::before {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    right: -38px;
+    bottom: -38px;
+    border-radius: 50%;
+    content: "";
+    background: radial-gradient(circle, rgba(var(--sn-secondary-rgb), 0.14), transparent 70%);
+}
+
+.about-hero-card .mission-copy h2,
+.about-hero-card .mission-copy p {
+    position: relative;
+    z-index: 1;
+}
+
 .mission-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -1133,6 +1200,7 @@ h1 {
 @media (max-width: 900px) {
     .hero,
     .mission-grid,
+    .about-hero-card .mission-grid,
     .success-lab,
     .values-card,
     .featured-review {
@@ -1148,6 +1216,10 @@ h1 {
     .mission-panel {
         position: relative;
         top: 0;
+    }
+
+    .about-hero-card .mission-panel {
+        top: auto;
     }
 
     .radial-chart {
