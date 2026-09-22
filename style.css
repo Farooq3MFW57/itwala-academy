@@ -1372,6 +1372,136 @@ h1 {
     font-weight: 700;
 }
 
+.testimonial-hero-panel {
+    isolation: isolate;
+}
+
+.testimonial-hero-panel::after {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    bottom: -210px;
+    z-index: -1;
+    border-radius: 50%;
+    content: "";
+    background: radial-gradient(circle, rgba(var(--sn-secondary-rgb), 0.18), rgba(var(--sn-accent-rgb), 0.12), transparent 68%);
+    filter: blur(6px);
+}
+
+.testimonial-metric-strip {
+    margin-bottom: 0;
+}
+
+.testimonial-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.testimonial-proof-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 230px;
+    padding: 26px;
+    border: 1px solid var(--sn-border);
+    border-radius: 26px;
+    background:
+        linear-gradient(145deg, rgba(var(--sn-surface-rgb), 0.96), rgba(var(--sn-surface-rgb), 0.84)),
+        radial-gradient(circle at top right, rgba(var(--sn-secondary-rgb), 0.13), transparent 46%);
+    box-shadow: 0 16px 42px rgba(var(--sn-primary-rgb), 0.09);
+}
+
+.testimonial-proof-card::after {
+    position: absolute;
+    right: -40px;
+    bottom: -52px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    content: "";
+    background: radial-gradient(circle, rgba(var(--sn-accent-rgb), 0.2), transparent 70%);
+}
+
+.quote-mark {
+    display: inline-grid;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    place-items: center;
+    border-radius: 16px;
+    color: var(--sn-surface-strong);
+    background: linear-gradient(135deg, var(--sn-primary), var(--sn-secondary), var(--sn-accent));
+    box-shadow: 0 14px 28px rgba(var(--sn-secondary-rgb), 0.2);
+    font-size: 13px;
+    font-weight: 950;
+}
+
+.testimonial-proof-card h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+    letter-spacing: -0.04em;
+}
+
+.testimonial-proof-card p {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    color: var(--sn-text-muted);
+}
+
+.testimonial-cta-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    overflow: hidden;
+    padding: clamp(28px, 5vw, 44px);
+    border: 1px solid rgba(var(--sn-secondary-rgb), 0.18);
+    border-radius: var(--sn-radius-lg);
+    color: var(--sn-surface-strong);
+    background:
+        linear-gradient(135deg, rgba(var(--sn-primary-rgb), 0.98), rgba(var(--sn-secondary-deep-rgb), 0.95), rgba(var(--sn-secondary-rgb), 0.92), rgba(var(--sn-accent-rgb), 0.9)),
+        radial-gradient(circle at top right, rgba(var(--sn-surface-rgb), 0.24), transparent 52%);
+    box-shadow: var(--sn-shadow);
+}
+
+.testimonial-cta-band h2 {
+    max-width: 760px;
+    margin-bottom: 10px;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+}
+
+.testimonial-cta-band p {
+    max-width: 700px;
+    margin-bottom: 0;
+    color: rgba(var(--sn-surface-rgb), 0.82);
+    font-size: 18px;
+}
+
+.testimonial-cta-band .eyebrow {
+    border-color: rgba(var(--sn-surface-rgb), 0.24);
+    color: var(--sn-surface-strong);
+    background: rgba(var(--sn-surface-rgb), 0.12);
+}
+
+.testimonial-cta-band .eyebrow::before {
+    background: var(--sn-surface-strong);
+}
+
+.testimonial-cta-band .cta-row {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+}
+
+.testimonial-cta-band .button-secondary {
+    border-color: rgba(var(--sn-surface-rgb), 0.22);
+    color: var(--sn-surface-strong);
+    background: rgba(var(--sn-surface-rgb), 0.12);
+}
+
 .site-footer {
     padding: 26px 0 40px;
     color: var(--sn-text-muted);
@@ -1403,7 +1533,8 @@ h1 {
     .about-details,
     .reviews-grid,
     .story-grid,
-    .learning-steps {
+    .learning-steps,
+    .testimonial-proof-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -1424,7 +1555,8 @@ h1 {
         display: none;
     }
 
-    .about-cta-card {
+    .about-cta-card,
+    .testimonial-cta-band {
         align-items: flex-start;
         flex-direction: column;
     }
@@ -1462,7 +1594,8 @@ h1 {
     .nebula-card,
     .content-card,
     .values-card,
-    .about-cta-card {
+    .about-cta-card,
+    .testimonial-cta-band {
         border-radius: 22px;
     }
 
@@ -1475,7 +1608,8 @@ h1 {
     .reviews-grid,
     .snapshot-grid,
     .story-grid,
-    .learning-steps {
+    .learning-steps,
+    .testimonial-proof-grid {
         grid-template-columns: 1fr;
     }
 
