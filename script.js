@@ -1,75 +1,29 @@
-(function () {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
 
-    function animateCounter(counter) {
-        if (counter.dataset.animated === "true") {
-            return;
-        }
-
-        counter.dataset.animated = "true";
-
+    counters.forEach((counter) => {
         const target = Number(counter.dataset.count || 0);
+        const duration = 900;
+        const start = performance.now();
 
-        if (prefersReducedMotion) {
-            counter.textContent = String(target);
-            return;
-        }
-
-        const duration = 1100;
-        const startTime = performance.now();
-
-        function tick(now) {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
+        const update = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
-            counter.textContent = String(Math.round(target * eased));
+            counter.textContent = Math.round(target * eased).toString();
 
             if (progress < 1) {
-                requestAnimationFrame(tick);
+                requestAnimationFrame(update);
             }
-        }
+        };
 
-        requestAnimationFrame(tick);
-    }
+        requestAnimationFrame(update);
+    });
 
-    function revealElement(element) {
-        element.classList.add("is-visible");
+    document.querySelectorAll(".success-bar-fill").forEach((bar) => {
+        const value = Math.max(0, Math.min(100, Number(bar.dataset.value || 0)));
 
-        element.querySelectorAll(".success-bar-fill").forEach(function (bar) {
-            const value = Number(bar.dataset.value || 0);
-            bar.style.width = Math.max(0, Math.min(value, 100)) + "%";
+        requestAnimationFrame(() => {
+            bar.style.width = `${value}%`;
         });
-
-        element.querySelectorAll(".counter").forEach(animateCounter);
-    }
-
-    function boot() {
-        const revealTargets = document.querySelectorAll(".stats, .success-lab");
-
-        if (!("IntersectionObserver" in window)) {
-            revealTargets.forEach(revealElement);
-            return;
-        }
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    revealElement(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.22
-        });
-
-        revealTargets.forEach(function (target) {
-            observer.observe(target);
-        });
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", boot);
-    } else {
-        boot();
-    }
-}());
+    });
+});
