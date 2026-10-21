@@ -5,6 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITwala Academy - Practical Microsoft &amp; IT Learning</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            color-scheme: light;
+            --theme-bg: #fff7ed;
+            --theme-bg-soft: #ffedd5;
+            --theme-panel: rgba(255, 255, 255, 0.84);
+            --theme-accent: #f97316;
+            --theme-accent-dark: #c2410c;
+            --theme-accent-soft: #fed7aa;
+            --theme-text: #422006;
+            --theme-muted: #7c4a21;
+            --theme-border: rgba(249, 115, 22, 0.22);
+        }
+
+        body {
+            background: radial-gradient(circle at top left, rgba(251, 146, 60, 0.24), transparent 34rem), linear-gradient(135deg, #fff7ed 0%, #fffaf5 48%, #ffedd5 100%) !important;
+            color: var(--theme-text) !important;
+        }
+
+        .site-header {
+            background: rgba(255, 247, 237, 0.92) !important;
+            border-bottom: 1px solid var(--theme-border) !important;
+            backdrop-filter: blur(18px);
+        }
+
+        .site-footer {
+            background: #fff1e6 !important;
+            border-top: 1px solid var(--theme-border) !important;
+            color: var(--theme-muted) !important;
+        }
+
+        .brand,
+        .nav-links a,
+        h1,
+        h2,
+        h3,
+        strong {
+            color: var(--theme-text) !important;
+        }
+
+        p,
+        li,
+        small,
+        .hero-lede,
+        .brand-text small {
+            color: var(--theme-muted) !important;
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            background: rgba(249, 115, 22, 0.14) !important;
+            color: var(--theme-accent-dark) !important;
+        }
+
+        .brand-mark,
+        .icon,
+        .capability-icon,
+        .reviewer-avatar,
+        .orbit-core {
+            background: linear-gradient(135deg, #fb923c, #f97316) !important;
+            color: #ffffff !important;
+            box-shadow: 0 14px 30px rgba(249, 115, 22, 0.25) !important;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ea580c, #fb923c) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            color: transparent !important;
+        }
+
+        .eyebrow,
+        .score-number {
+            color: var(--theme-accent-dark) !important;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+            border-color: transparent !important;
+            color: #ffffff !important;
+            box-shadow: 0 16px 30px rgba(249, 115, 22, 0.28) !important;
+        }
+
+        .button-secondary {
+            background: #fff7ed !important;
+            border: 1px solid var(--theme-border) !important;
+            color: var(--theme-accent-dark) !important;
+        }
+
+        .content-card,
+        .detail-card,
+        .offering-card,
+        .values-card,
+        .nebula-card,
+        .graph-card,
+        .portfolio-visual-card,
+        .portfolio-card,
+        .featured-review,
+        .review-card,
+        .portfolio-process-card,
+        .about-cta-card,
+        .snapshot-card,
+        .story-panel,
+        .learning-steps article,
+        .review-highlight {
+            background: var(--theme-panel) !important;
+            border: 1px solid var(--theme-border) !important;
+            box-shadow: 0 24px 70px rgba(194, 65, 12, 0.10) !important;
+        }
+
+        .detail-number,
+        .portfolio-tag,
+        .verified-badge,
+        .dashboard-status,
+        .learning-steps article span,
+        .portfolio-process article span {
+            background: #ffedd5 !important;
+            border-color: var(--theme-border) !important;
+            color: var(--theme-accent-dark) !important;
+        }
+
+        .success-bar-fill,
+        .mini-bars span,
+        .bi-chart span {
+            background: linear-gradient(180deg, #fb923c, #ea580c) !important;
+        }
+
+        .radial-chart,
+        .portfolio-donut {
+            background: conic-gradient(#f97316 var(--score), #ffedd5 0) !important;
+        }
+
+        .line-path {
+            stroke: #f97316 !important;
+        }
+
+        .grid-line {
+            stroke: rgba(249, 115, 22, 0.18) !important;
+        }
+
+        .line-chart circle {
+            fill: #fb923c !important;
+        }
+
+        .star-rating span {
+            color: var(--theme-accent) !important;
+        }
+
+        .orbit-ring,
+        .floating-chip {
+            border-color: rgba(249, 115, 22, 0.28) !important;
+            background: rgba(255, 247, 237, 0.78) !important;
+            color: var(--theme-accent-dark) !important;
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -215,9 +370,9 @@
                         <svg viewBox="0 0 640 220" role="img">
                             <defs>
                                 <linearGradient id="lineGradient" x1="0" x2="1" y1="0" y2="0">
-                                    <stop offset="0%" stop-color="#061225"></stop>
-                                    <stop offset="55%" stop-color="#12345f"></stop>
-                                    <stop offset="100%" stop-color="#2563eb"></stop>
+                                    <stop offset="0%" stop-color="#fb923c"></stop>
+                                    <stop offset="55%" stop-color="#f97316"></stop>
+                                    <stop offset="100%" stop-color="#ea580c"></stop>
                                 </linearGradient>
                             </defs>
                             <path class="grid-line" d="M20 180H620"></path>
