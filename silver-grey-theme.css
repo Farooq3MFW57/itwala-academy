@@ -1,0 +1,325 @@
+:root {
+    --silver-bg: #d8dde4;
+    --silver-bg-soft: #eef0f4;
+    --silver-surface: rgba(246, 247, 249, 0.84);
+    --silver-surface-strong: rgba(255, 255, 255, 0.94);
+    --silver-ink: #1f252d;
+    --silver-muted: #5f6874;
+    --silver-line: rgba(82, 91, 104, 0.22);
+    --silver-dark: #3e4651;
+    --silver-mid: #8d96a3;
+    --silver-light: #ffffff;
+    --silver-shadow: 0 24px 70px rgba(40, 47, 58, 0.18);
+    --silver-inset: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+    --color-primary: var(--silver-dark);
+    --color-secondary: var(--silver-mid);
+    --color-accent: #6f7885;
+}
+
+html {
+    background: var(--silver-bg);
+}
+
+body {
+    color: var(--silver-ink) !important;
+    background:
+        radial-gradient(circle at 12% -8%, rgba(255, 255, 255, 0.95), transparent 34%),
+        radial-gradient(circle at 88% 8%, rgba(173, 181, 191, 0.62), transparent 32%),
+        linear-gradient(135deg, #f7f8fa 0%, #d8dde4 42%, #b8c0cb 100%) !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        linear-gradient(120deg, rgba(255,255,255,0.34), transparent 28%, rgba(255,255,255,0.18) 52%, transparent 76%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.10) 0 1px, transparent 1px 90px);
+}
+
+::selection {
+    background: #aeb6c1;
+    color: #111827;
+}
+
+:is(h1, h2, h3, h4, strong, blockquote) {
+    color: var(--silver-ink) !important;
+}
+
+:is(p, li, small, span) {
+    border-color: var(--silver-line);
+}
+
+:is(p, li, small, .hero-lede, .section-header p, .card-footer p, .portfolio-card-copy p) {
+    color: var(--silver-muted) !important;
+}
+
+.site-header {
+    background: rgba(238, 240, 244, 0.86) !important;
+    border-bottom: 1px solid var(--silver-line) !important;
+    box-shadow: 0 16px 40px rgba(54, 63, 76, 0.12);
+    backdrop-filter: blur(18px) saturate(130%);
+}
+
+.brand {
+    color: var(--silver-ink) !important;
+}
+
+.brand-mark,
+.orbit-core,
+.icon,
+.detail-number,
+.capability-icon,
+.reviewer-avatar,
+.cloud-node.node-main {
+    color: #1d232b !important;
+    background:
+        linear-gradient(145deg, #ffffff 0%, #cfd5de 44%, #8d96a3 100%) !important;
+    border: 1px solid rgba(255,255,255,0.72) !important;
+    box-shadow: var(--silver-inset), 0 14px 30px rgba(53, 61, 73, 0.20) !important;
+}
+
+.brand-text small,
+.graph-card-heading span,
+.dashboard-header small {
+    color: #66707c !important;
+}
+
+.nav-links a {
+    color: #434c58 !important;
+    background: rgba(255,255,255,0.24);
+    border: 1px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #111827 !important;
+    background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(206, 212, 221, 0.86)) !important;
+    border-color: rgba(123, 132, 145, 0.28) !important;
+    box-shadow: 0 12px 28px rgba(58, 67, 80, 0.13);
+}
+
+.gradient-text {
+    color: transparent !important;
+    background:
+        linear-gradient(105deg, #1f252d 0%, #68727f 28%, #f8fafc 48%, #8a94a1 65%, #2d3540 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+.eyebrow {
+    color: #3f4650 !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.66);
+}
+
+:is(.nebula-card,
+.content-card,
+.offering-card,
+.graph-card,
+.featured-review,
+.review-card,
+.detail-card,
+.values-card,
+.about-cta-card,
+.story-panel,
+.snapshot-card,
+.learning-model-card,
+.academy-snapshot,
+.portfolio-visual-card,
+.portfolio-card,
+.portfolio-process-card,
+.review-highlight,
+.success-metrics div,
+.portfolio-capability-grid article,
+.portfolio-process article,
+.learning-steps article) {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.92), rgba(224, 228, 234, 0.78)) !important;
+    border: 1px solid var(--silver-line) !important;
+    box-shadow: var(--silver-shadow), var(--silver-inset) !important;
+}
+
+:is(.nebula-card,
+.portfolio-visual-card,
+.review-score-card) {
+    background:
+        radial-gradient(circle at 24% 14%, rgba(255,255,255,0.98), transparent 34%),
+        linear-gradient(150deg, rgba(250,251,252,0.96), rgba(189,198,208,0.88)) !important;
+}
+
+.button {
+    border: 1px solid rgba(82, 91, 104, 0.26) !important;
+    box-shadow: var(--silver-inset), 0 16px 34px rgba(44, 52, 63, 0.18) !important;
+}
+
+.button-primary {
+    color: #ffffff !important;
+    background:
+        linear-gradient(145deg, #697380 0%, #3e4651 48%, #20262e 100%) !important;
+}
+
+.button-primary:hover {
+    background:
+        linear-gradient(145deg, #7b8592 0%, #4a5360 50%, #262d36 100%) !important;
+}
+
+.button-secondary {
+    color: #20262e !important;
+    background:
+        linear-gradient(145deg, #ffffff 0%, #e1e5eb 48%, #b9c1cc 100%) !important;
+}
+
+.stat,
+.review-breakdown div,
+.dashboard-status,
+.verified-badge,
+.portfolio-tag,
+.floating-chip {
+    color: #27303a !important;
+    background: rgba(255,255,255,0.68) !important;
+    border: 1px solid var(--silver-line) !important;
+    box-shadow: var(--silver-inset), 0 12px 26px rgba(54, 63, 76, 0.12);
+}
+
+.orbit-ring {
+    border-color: rgba(94, 104, 118, 0.32) !important;
+    box-shadow: 0 0 40px rgba(255,255,255,0.72), inset 0 0 24px rgba(255,255,255,0.36) !important;
+}
+
+.star-rating span {
+    color: #7f8996 !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.score-number {
+    color: #222a34 !important;
+}
+
+.radial-chart,
+.portfolio-donut {
+    background:
+        conic-gradient(#444d59 var(--score), rgba(142, 152, 166, 0.24) 0) !important;
+    box-shadow: var(--silver-inset), 0 18px 44px rgba(47, 56, 68, 0.18) !important;
+}
+
+.radial-chart::before,
+.portfolio-donut::before {
+    background: linear-gradient(145deg, #ffffff, #dfe4eb) !important;
+}
+
+.success-bar-track {
+    background: rgba(133, 144, 158, 0.20) !important;
+    border: 1px solid rgba(91, 101, 115, 0.16) !important;
+}
+
+.success-bar-fill,
+.mini-bars span,
+.bi-chart span {
+    background:
+        linear-gradient(180deg, #ffffff 0%, #aab3bf 36%, #46505c 100%) !important;
+}
+
+.line-chart svg .grid-line {
+    stroke: rgba(96, 106, 121, 0.24) !important;
+}
+
+.line-chart svg .line-path {
+    stroke: #4c5663 !important;
+    fill: none !important;
+}
+
+.line-chart svg circle {
+    fill: #535e6c !important;
+    stroke: #f8fafc !important;
+}
+
+#lineGradient stop:nth-child(1),
+#portfolioGradientOne stop:nth-child(1) {
+    stop-color: #f8fafc !important;
+}
+
+#lineGradient stop:nth-child(2),
+#portfolioGradientOne stop:nth-child(2) {
+    stop-color: #aab3bf !important;
+}
+
+#lineGradient stop:nth-child(3),
+#portfolioGradientOne stop:nth-child(3) {
+    stop-color: #4b5563 !important;
+}
+
+.portfolio-device {
+    background: linear-gradient(145deg, #4a5360, #222a34) !important;
+    border-color: rgba(255,255,255,0.28) !important;
+}
+
+.device-screen,
+.compact-graphic,
+.portfolio-card-graphic {
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.90), rgba(205, 212, 221, 0.72)) !important;
+    border-color: var(--silver-line) !important;
+}
+
+.device-top span {
+    background: #c8cfd8 !important;
+}
+
+.portfolio-floating-note {
+    color: #1f252d !important;
+    background: rgba(255,255,255,0.88) !important;
+    border: 1px solid var(--silver-line) !important;
+    box-shadow: var(--silver-shadow), var(--silver-inset) !important;
+}
+
+.portfolio-card-graphic svg rect {
+    fill: rgba(238, 241, 245, 0.92) !important;
+    stroke: rgba(84, 94, 108, 0.28) !important;
+}
+
+.portfolio-card-graphic svg path {
+    fill: none !important;
+    stroke: #56616f !important;
+    stroke-width: 8 !important;
+    stroke-linecap: round;
+}
+
+.portfolio-card-graphic svg circle {
+    fill: #525d6b !important;
+    stroke: #ffffff !important;
+    stroke-width: 4 !important;
+}
+
+.portfolio-card-graphic svg g rect,
+.excel-grid span,
+.team-board span {
+    background: linear-gradient(145deg, #ffffff, #cdd4dd) !important;
+    fill: #eef1f5 !important;
+    stroke: rgba(84, 94, 108, 0.24) !important;
+}
+
+.cloud-node {
+    background: linear-gradient(145deg, #ffffff, #aeb7c3) !important;
+    border-color: rgba(84, 94, 108, 0.28) !important;
+}
+
+.site-footer {
+    color: #525c69 !important;
+    background:
+        linear-gradient(180deg, rgba(216,221,228,0), rgba(185, 194, 205, 0.58)) !important;
+    border-top: 1px solid var(--silver-line) !important;
+}
+
+.site-footer p {
+    color: #525c69 !important;
+}
+
+a {
+    color: #3f4854;
+}
+
+a:hover {
+    color: #111827;
+}
